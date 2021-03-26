@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<html>
+    <head>
+        <title>Diabetes Prediction</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h2>DIABETES PREDICTION<br>Using K Nearest Neighbor Classifier</h2>
+        <form action="calculate">
+            <div class="wrapper">
+				<div class="A">
+					<div class="user-box1">
+						<input type="text" name="prg" value="{{prg}}" required="">
+						<label>Pregnancies</label>
+					</div>
+					<div class="user-box1">
+						<input type="text" name="gl" value="{{gl}}" required="">
+						<label>Glucose</label>
+					</div>
+					<div class="user-box1">
+						<input type="text" name="bp" value="{{bp}}" required="">
+						<label>Blood Pressure</label>
+					</div>
+					<div class="user-box1">
+						<input type="text" name="st" value="{{st}}" required="">
+						<label>Skin Thickness</label>
+					</div>
+				</div>
+				<div class="b">
+					<div class="user-box2">
+						<input type="text" name="ins" value="{{ins}}" required="">
+						<label>Insulin</label>
+					</div>
+					<div class="user-box2">
+						<input type="text" name="bmi" value="{{bmi}}" required="">
+						<label>BMI</label>
+					</div>
+					<div class="user-box2">
+						<input type="text" name="dpf" value="{{dpf}}" required="">
+						<label>Diabetes Pedigree Function</label>
+					</div>
+					<div class="user-box2">
+						<input type="text" name="age" value="{{age}}" required="">
+						<label>Age</label>
+					</div>
+				</div>
+			</div>
+				<div class="form_submit">
+					<input type="submit" name="submit" value="Predict" class="submitbtn" />
+				</div>
+        </form><br>
+        <h2>Does have Diabetes ? {{predicted}}</h2>
+    </div>
+</body>
+
+</html>
